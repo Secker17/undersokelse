@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Elevers Poengfordeling</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="toastContainer"></div>
+
+
+<!-- Mørk Modus-knapp -->
+    <div class="container">
+        <h1>Fordel 100 Poeng blant Kategoriene</h1>
+        <form id="surveyForm">
+            <div class="choices">
+                <div class="choice">
+                    <label for="hjemsted">Hjemsted</label>
+                    <input type="number" id="hjemsted" name="Hjemsted" min="0" max="100" value="0">
+                </div>
+                <div class="choice">
+                    <label for="familie">Familie</label>
+                    <input type="number" id="familie" name="Familie" min="0" max="100" value="0">
+                </div>
+                <div class="choice">
+                    <label for="kjonn">Kjønn</label>
+                    <input type="number" id="kjonn" name="Kjønn" min="0" max="100" value="0">
+                </div>
+                <div class="choice">
+                    <label for="kultur">Kultur</label>
+                    <input type="number" id="kultur" name="Kultur" min="0" max="100" value="0">
+                </div>
+                <div class="choice">
+                    <label for="venner">Venner</label>
+                    <input type="number" id="venner" name="Venner" min="0" max="100" value="0">
+                </div>
+                <div class="choice">
+                    <label for="rollemodeller">Rollemodeller</label>
+                    <input type="number" id="rollemodeller" name="Rollemodeller" min="0" max="100" value="0">
+                </div>
+                <div class="choice">
+                    <label for="barneskolen">Barneskolen</label>
+                    <input type="number" id="barneskolen" name="Barneskolen" min="0" max="100" value="0">
+                </div>
+                <div class="choice">
+                    <label for="ungdomsskolen">Ungdomsskolen</label>
+                    <input type="number" id="ungdomsskolen" name="Ungdomsskolen" min="0" max="100" value="0">
+                </div>
+                <div class="choice">
+                    <label for="politikere">Politikere</label>
+                    <input type="number" id="politikere" name="Politikere" min="0" max="100" value="0">
+                </div>
+                <div class="choice">
+                    <label for="sosialeMedier">Sosiale Medier</label>
+                    <input type="number" id="sosialeMedier" name="Sosiale Medier" min="0" max="100" value="0">
+                </div>
+                <div class="choice">
+                    <label for="penger">Penger</label>
+                    <input type="number" id="penger" name="Penger" min="0" max="100" value="0">
+                </div>
+                <div class="choice">
+                    <label for="status">Status</label>
+                    <input type="number" id="status" name="Status" min="0" max="100" value="0">
+                </div>
+            </div>
+            <div class="total-points">Totalt Poeng: <span id="totalPoints">0</span>/100</div>
+            <button type="submit">Vis Resultat</button>
+        </form>
+     <center>
+        <div id="chartContainer" style="width: 400px; height: 400px;">
+            <canvas id="resultChart"></canvas>
+        </div>
+    </div>
+</center>
+    <script src="script.js"></script>
+</body>
+</html>
